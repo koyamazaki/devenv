@@ -1,0 +1,11 @@
+# build
+docker build -t ssh-server .
+
+# run
+docker run -d -p 2222:22 --name ssh-server ssh-server
+
+# ssh login
+ssh -p 2222 developer@localhost
+
+# ssh login on X11 forwarding
+ssh -X -p 2222 developer@localhost
